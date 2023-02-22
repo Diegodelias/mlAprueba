@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Procesando respuesta de MercadoLibre</title>
+        <script>
+            function procesarRespuesta() {
+                var hash = window.location.hash;
+                var token = hash.substring(14, hash.indexOf("&"));
+                // Aquí puedes hacer lo que quieras con el token de acceso
+                // por ejemplo, guardarlo en una cookie o enviarlo a tu servidor backend
+    
+                // Mostrar la respuesta en HTML
+                var respuestaEl = document.getElementById("respuesta");
+                respuestaEl.innerHTML = hash;
+            }
+        </script>
+    </head>
+    <body onload="procesarRespuesta()">
+        <h1>Procesando respuesta de MercadoLibre...</h1>
+        <p>La respuesta es:</p>
+        <pre id="respuesta"></pre>
+    </body>
+    </html>
